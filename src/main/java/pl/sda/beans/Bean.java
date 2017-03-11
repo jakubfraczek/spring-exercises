@@ -15,6 +15,7 @@ public class Bean {
     public void testMethod() {
         methodCalled = true;
     }
+
     public boolean isTestMethodCalled() {
         return methodCalled;
     }
