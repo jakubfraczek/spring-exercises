@@ -23,7 +23,7 @@ public class UserTest {
     public void serviceTest() {
         assertNotNull(service);
         assertEquals(3, service.getAllUsers().size());
-        assertEquals("Iza", service.getUserByLogin("MariaAnna"));
+        assertEquals("Iza", service.getUserByLogin("MariaAnna").getName());
     }
 
 }

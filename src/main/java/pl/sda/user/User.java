@@ -6,6 +6,8 @@ public class User {
     private String surname;
     private int age;
 
+    public User(){}
+
     public User(String login, String name, String surname, int age) {
         this.login = login;
         this.name = name;

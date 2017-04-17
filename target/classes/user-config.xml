@@ -5,35 +5,35 @@
 
 
     <bean name="user1" class="pl.sda.user.User">
-        <constructor-arg name="login" value="AnnaKowalska11"/>
-        <constructor-arg name="name" value="Stefan"/>
-        <constructor-arg name="surname" value="Nowak"/>
-        <constructor-arg name="age" value="35"/>
+        <property name="login" value="AnnaKowalska11"/>
+        <property name="name" value="Stefan"/>
+        <property name="surname" value="Nowak"/>
+        <property name="age" value="35"/>
     </bean>
     <bean name="user2" class="pl.sda.user.User">
-        <constructor-arg name="login" value="GrazynaGrazyna"/>
-        <constructor-arg name="name" value="Anna"/>
-        <constructor-arg name="surname" value="Iksinska"/>
-        <constructor-arg name="age" value="12"/>
+        <property name="login" value="GrazynaGrazyna"/>
+        <property name="name" value="Anna"/>
+        <property name="surname" value="Iksinska"/>
+        <property name="age" value="12"/>
     </bean>
     <bean name="user3" class="pl.sda.user.User">
-        <constructor-arg name="login" value="MariaAnna"/>
-        <constructor-arg name="name" value="Iza"/>
-        <constructor-arg name="surname" value="Popek"/>
-        <constructor-arg name="age" value="57"/>
+        <property name="login" value="MariaAnna"/>
+        <property name="name" value="Iza"/>
+        <property name="surname" value="Popek"/>
+        <property name="age" value="57"/>
     </bean>
 
     <bean name="users" class="pl.sda.user.InMemoryUserDAO">
-        <constructor-arg name="users">
+        <property name="users">
             <list>
                 <ref bean="user1"/>
                 <ref bean="user2"/>
                 <ref bean="user3"/>
             </list>
-        </constructor-arg>
+        </property>
     </bean>
 
     <bean name="sevrice" class="pl.sda.user.DefaultUserService">
-        <constructor-arg name="userDAO" ref="users"/>
+        <property name="userDAO" ref="users"/>
     </bean>
 </beans>
